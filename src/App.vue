@@ -1,33 +1,35 @@
 <template>
   <div id="app">
     <h1>{{ msg }}</h1>
-    <p>{{count}}</p>
-    <button @click="increaseCount" class="btn-primary">
-      Click me to increase your life chances
-    </button>
-    <button @click="decreaseCount" class="btn-danger">
-      Click me to decrease your life chances
-    </button>
+    <app-example :quote="'A wonderful quote'"></app-example>
+    <app-quote :quote="'A wonderful quote'"></app-quote>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-      count:0,
+  import Example from './views/Example'
+  import Quote from "./views/Quote";
+
+  export default {
+    components:{
+      appExample : Example,
+      appQuote: Quote
+    },
+    name: 'app',
+    data () {
+      return {
+        msg: 'Welcome to Your Vue.js App',
+        count:0,
+      }
+    },
+    methods:{
+      increaseCount(){
+        return this.count ++
+      } ,
+      decreaseCount(){
+        return this.count --
+      }
     }
-  },
-  methods:{
-    increaseCount(){
-      return this.count ++
-    } ,
-    decreaseCount(){
-      return this.count --
-    }
-  }
 }
 </script>
 
