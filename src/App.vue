@@ -1,6 +1,13 @@
 <template>
   <div id="app">
     <h1>{{ msg }}</h1>
+    <p>{{count}}</p>
+    <button @click="increaseCount" class="btn-primary">
+      Click me to increase your life chances
+    </button>
+    <button @click="decreaseCount" class="btn-danger">
+      Click me to decrease your life chances
+    </button>
   </div>
 </template>
 
@@ -9,7 +16,16 @@ export default {
   name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      count:0,
+    }
+  },
+  methods:{
+    increaseCount(){
+      return this.count ++
+    } ,
+    decreaseCount(){
+      return this.count --
     }
   }
 }
@@ -17,7 +33,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Manjari Bold', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

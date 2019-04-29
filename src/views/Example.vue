@@ -1,6 +1,5 @@
 <template>
     <div id="example">
-      <router-view name="example"></router-view>
       <p>{{count}}</p>
       <button @click="increaseCount">
         Click me to increase your life chances
