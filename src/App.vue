@@ -8,6 +8,27 @@
       <div class="progress">
         <div class="progress-bar" role="progressbar" style="width: 25%"> 25%</div>
       </div>
+     <div align="center">
+       <div class="mt-5">
+         <h4>New Quote</h4>
+       </div>
+       <div class="form-group">
+         <textarea name="" id="exampleFormControlTextarea1" rows="3"></textarea>
+       </div>
+       <div>
+         <button class="btn btn-primary">Add Quote</button>
+       </div>
+     </div>
+    <div class="card mt-4 col-md-4">
+        <div class="card-body">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit.  rerum vero!
+        </div>
+      </div>
+      <div class="card mt-4 bg-secondary">
+        <div class="card-body text-center text-white">
+          Click on a quote to delete it!
+        </div>
+      </div>
     </app-quote>
     <!--<button @click="selectedComponent = 'appAuthor'" class="btn btn">Click to select Author</button>-->
     <!--<button @click="selectedComponent = 'appQuote' " class="btn btn">Click to select Quote</button>-->
