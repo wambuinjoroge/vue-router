@@ -1,21 +1,23 @@
 <template>
   <div id="app">
-    <h1>{{ msg }}</h1>
-    <app-example :quote="'A wonderful quote'"></app-example>
+    <!--<h1>{{ msg }}</h1>-->
+    <!--<app-example :quote="'A wonderful quote'"></app-example>-->
     <br>
     <app-quote>
       <h2 slot="title">{{title}}</h2>
-      <p>A wonderful quote</p>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" style="width: 25%"> 25%</div>
+      </div>
     </app-quote>
-    <button @click="selectedComponent = 'appAuthor'" class="btn btn">Click to select Author</button>
-    <button @click="selectedComponent = 'appQuote' " class="btn btn">Click to select Quote</button>
-    <button @click="selectedComponent = 'appNew' " class="btn btn">Click to select new quote</button>
-      <!--<app-author></app-author>-->
-      <!--<app-new></app-new>-->
-    <!--{{ selectedComponent }}-->
-    <component :is="selectedComponent">
-      <p>default component</p>
-    </component>
+    <!--<button @click="selectedComponent = 'appAuthor'" class="btn btn">Click to select Author</button>-->
+    <!--<button @click="selectedComponent = 'appQuote' " class="btn btn">Click to select Quote</button>-->
+    <!--<button @click="selectedComponent = 'appNew' " class="btn btn">Click to select new quote</button>-->
+
+    <!--<keep-alive>-->
+      <!--<component :is="selectedComponent">-->
+        <!--<p>default component</p>-->
+      <!--</component>-->
+    <!--</keep-alive>-->
   </div>
 </template>
 
@@ -37,7 +39,7 @@
       return {
         msg: 'Welcome to Your Vue.js App',
         count:0,
-        title:'Quote',
+        title:'Quotes Added',
         selectedComponent:'AppQuote'
       }
     },
@@ -60,9 +62,9 @@
   font-family: 'Manjari Bold', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /*text-align: center;*/
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px;
 }
 
 h1, h2 {
@@ -81,6 +83,12 @@ li {
 
 a {
   color: #42b983;
+}
+.box{
+  width: 320px;
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 0;
 }
 </style>
 <!--<div class="row justify-content-md-center">-->
